@@ -1,0 +1,28 @@
+[package]
+name = "f103-test2"
+version = "0.1.0"
+authors = ["Emil Gardström <emil.gardstrom@gmail.com>"]
+
+[dependencies]
+cortex-m = "0.2.11"
+cortex-m-rt = "0.2"
+cortex-m-rtfm =  "0.1.1"
+#cortex-m-semihosting = "*"
+stm32f103xx = "0.6.1"
+cast = {version = "*", default-features = false }
+
+[dev-dependencies]
+blue-pill = { git = "https://github.com/japaric/blue-pill" }
+[dev-dependencies.embedded-hal]
+git = "https://github.com/japaric/embedded-hal"
+rev = "5295697669f5b48a900aa325b8ebb4d4e8d4b236"
+
+[dev-dependencies.nb]
+git = "https://github.com/japaric/nb"
+
+[profile]
+dev = { opt-level = 1}
+release = {debug = true, lto = false}
+
+[replace]
+"cortex-m:0.2.11" = {path="cortex-m"}
