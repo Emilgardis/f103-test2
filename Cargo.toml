@@ -10,15 +10,15 @@ cortex-m-rtfm =  "0.1.1"
 #cortex-m-semihosting = "*"
 stm32f103xx = "0.6.1"
 cast = {version = "*", default-features = false }
+nb = { git = "https://github.com/japaric/nb" }
 
-[dev-dependencies]
-blue-pill = { git = "https://github.com/japaric/blue-pill" }
-[dev-dependencies.embedded-hal]
+[dependencies.embedded-hal]
 git = "https://github.com/japaric/embedded-hal"
 rev = "5295697669f5b48a900aa325b8ebb4d4e8d4b236"
 
-[dev-dependencies.nb]
-git = "https://github.com/japaric/nb"
+[dev-dependencies]
+blue-pill = { git = "https://github.com/japaric/blue-pill" }
+
 
 [profile]
 dev = { opt-level = 1}
